@@ -7,7 +7,7 @@ using System.Linq;
 using System.IO;
 using UnityEngine.UIElements;
 using Assets.Gridly.Internal.Scripts;
-using Newtonsoft.Json;
+using Unity.Plastic.Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace Gridly.Internal
@@ -507,7 +507,7 @@ namespace Gridly.Internal
             #region AddLang
 
             GUILayout.Space(3);
-            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSeachTextField"));
+            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSearchTextField"));
 
             GUILayout.BeginHorizontal();
             List<string> final = listLanguage.FindAll(x => x.Contains(search));

@@ -90,13 +90,24 @@ public class initiateCaptures : MonoBehaviour
         string levelname = SceneManager.GetActiveScene().name;
 
         filepath = Path.GetDirectoryName(filepath);
-        string screenshotDirPath = screenshotPath + "\\" + lang;
+        
+        bool isWinEditor = Application.platform == RuntimePlatform.WindowsEditor;
+        bool isOSXEditor = Application.platform == RuntimePlatform.OSXEditor;
 
+        string screenshotDirPath = screenshotPath + "\\" + lang;
+        if (isOSXEditor)
+        {
+            screenshotDirPath = screenshotPath + "/" + lang;
+        }
         if (!Directory.Exists(screenshotDirPath))
         {
             Directory.CreateDirectory(screenshotDirPath);
         }
         string filename = screenshotDirPath + "\\" + levelname + ".png";
+        if (isOSXEditor)
+        {
+            filename = screenshotDirPath + "/" + levelname + ".png";
+        }
         ScreenCapture.CaptureScreenshot(filename, superSize);
 
     }

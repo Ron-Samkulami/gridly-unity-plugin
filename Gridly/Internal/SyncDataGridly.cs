@@ -39,8 +39,8 @@ namespace Gridly
         {
             if (singleton == null)
                 singleton = this;
-            else 
-            { 
+            else
+            {
                 Destroy(gameObject);
                 return;
             }
@@ -60,9 +60,8 @@ namespace Gridly
             }
 
 
-            //gridlyFunction.SetupDatabases();
+            gridlyFunction.SetupDatabases();
 
-            
 
 
             //apply new data when finish setup userlocal

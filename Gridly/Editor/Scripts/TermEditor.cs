@@ -168,7 +168,7 @@ namespace Gridly.Internal
             GUILayout.BeginHorizontal();
 
             EditorGUI.BeginChangeCheck();
-            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSeachTextField"));
+            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSearchTextField"));
             if (EditorGUI.EndChangeCheck())
             {
                 RefeshList();

@@ -6,9 +6,8 @@ using UnityEngine;
 using System.Text;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Collections;
-using Newtonsoft.Json;
 using System.Linq;
+using Unity.Plastic.Newtonsoft.Json;
 
 namespace Gridly.Internal
 {

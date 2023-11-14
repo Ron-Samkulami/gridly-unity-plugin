@@ -67,7 +67,7 @@ namespace Gridly.Internal
 
             GUILayout.Space(5);
             EditorGUI.BeginChangeCheck();
-            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSeachTextField"));
+            search = GUILayout.TextField(search, GUI.skin.GetStyle("ToolbarSearchTextField"));
             if (EditorGUI.EndChangeCheck())
             {
                 
